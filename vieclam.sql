@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 23, 2020 lúc 02:19 PM
+-- Thời gian đã tạo: Th12 07, 2020 lúc 03:47 AM
 -- Phiên bản máy phục vụ: 10.4.10-MariaDB
 -- Phiên bản PHP: 7.2.25
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `congviec`
+-- Cơ sở dữ liệu: `vieclam`
 --
 
 -- --------------------------------------------------------
@@ -46,13 +46,33 @@ CREATE TABLE `congviec` (
 --
 
 INSERT INTO `congviec` (`id`, `linh_vuc_id`, `cong_ty`, `chuc_danh`, `mo_ta`, `luong`, `vi_tri`, `lien_he`, `email`, `ngay_dang`) VALUES
-(1, 1, 'Ngân hàng VCb', 'Giao dịch viên', 'Lorem ipsum is simply damiry text of the printing a', '20 triệu', 'Cà mau', 'Lê Thanh Công', 'Cong@yahoo.com', '2020-10-14 07:17:53'),
-(2, 2, 'Meosoft', 'CEO1', 'Lorem ipsum is simply damiry text of the printing a', '50 triệu', 'Tp Hồ Chí Minh', 'Nguyễn Thanh Nhàn', 'Thanhnhan@yahoo.com', '2020-10-14 07:17:53'),
-(13, 2, 'TNHH Lâm Tâm', 'Giám đốc công nghệ', 'Phát triển hệ thống thông tin', '25 triệu', 'Cà Mau', 'Lamtam@gmail.com', 'nhodf123@gmail.com', '2020-11-23 07:07:23'),
-(14, 3, 'TNHH Lâm Tâm', 'Giám đốc Cây trồng', 'Phát triển hệ thống nông nghiệp', '25 triệu', 'Cà Mau', 'Lamtam@gmail.com', 'nhodf123@gmail.com', '2020-11-23 07:15:50'),
-(15, 4, 'TNHH Lâm Tâm', 'ki sư xây dựng1', 'Phát triển và điều hành nhà máy', '25 triệu', 'Cà Mau', 'Lamtam@gmail.com', 'nhodf123@gmail.com', '2020-11-23 07:16:27'),
-(17, 2, 'TNHH Lâm Tâm', 'Trưởng phòng thông tin1', 'Phát triển ứng dụng đa điểm', '25 triệu', 'Cà Mau', 'Lamtam@gmail.com', 'nhodf123@gmail.com', '2020-11-23 09:20:42'),
-(18, 4, 'TNHH Lâm Tâm', 'Phó phòng hành chinh3', '', '15 triệu', 'Cà Mau', 'Lamtam@gmail.com', 'nhodf123@gmail.com', '2020-11-23 09:27:47');
+(45, 1, 'sdfsadfasdfasd', 'sdfasfasdfdsaf', '', '', '', '', '', '2020-12-06 12:22:10'),
+(50, 0, 'sdfsadfsadfasdfasdf', 'sdfasfasdfdsaf', '', '', '', '', '', '2020-12-06 13:06:32'),
+(51, 1, 'asdfadsfasdfasd', 'adfgadfhagadga', '', '', '', '', '', '2020-12-06 13:07:12'),
+(52, 1, 'sdfsadfasdfasd', 'adfgadfhagadga12', '', '', '', '', '', '2020-12-06 13:09:34'),
+(53, 0, 'asdfadsfasdfasd', 'adfgadfhagadga', '', '', '', '', '', '2020-12-06 13:24:13'),
+(54, 2, 'asdfadsfasdfasd', 'asdfasdfasdfadsfasd', '', '', '', '', '', '2020-12-06 13:25:40'),
+(55, 2, 'asdfadsfasdfasd', 'asdfasdfasdfadsfasd', '', '', '', '', '', '2020-12-06 13:28:57'),
+(57, 0, 'asdfadsfasdfasd', 'adfgadfhagadga', '', '', '', '', '', '2020-12-06 13:29:36');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `dangnhap`
+--
+
+CREATE TABLE `dangnhap` (
+  `idTK` int(11) NOT NULL,
+  `TenTK` varchar(255) NOT NULL,
+  `MatKhau` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `dangnhap`
+--
+
+INSERT INTO `dangnhap` (`idTK`, `TenTK`, `MatKhau`) VALUES
+(1, 'admin', '123456');
 
 -- --------------------------------------------------------
 
@@ -86,6 +106,12 @@ ALTER TABLE `congviec`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `dangnhap`
+--
+ALTER TABLE `dangnhap`
+  ADD PRIMARY KEY (`idTK`);
+
+--
 -- Chỉ mục cho bảng `linhvuc`
 --
 ALTER TABLE `linhvuc`
@@ -99,7 +125,13 @@ ALTER TABLE `linhvuc`
 -- AUTO_INCREMENT cho bảng `congviec`
 --
 ALTER TABLE `congviec`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+
+--
+-- AUTO_INCREMENT cho bảng `dangnhap`
+--
+ALTER TABLE `dangnhap`
+  MODIFY `idTK` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `linhvuc`
